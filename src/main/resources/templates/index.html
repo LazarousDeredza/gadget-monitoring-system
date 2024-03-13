@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Cicosy FavIcon -->
+    <link rel="icon" href="img/cicosy_favicon.ico" image="image/gif" size="16x16">
+
+    <!-- Font Awesome CSS CDN -->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Drawer CSS File -->
+    <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Gadget System</title>
+</head>
+
+<body onload="loadGadgetsIndex()">
+<!-- Navbar Starts -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <!-- Drawer Start -->
+    <button class="btn btn-outline-light" data-toggle="drawer" data-target="#Drawer">
+        <i class="fas fa-sliders-h"></i>
+    </button>
+
+    <div class="drawer drawer-left slide" tabindex="-1" role="dialog" aria-labelledby="drawer-demo-title"
+         aria-hidden="true" id="Drawer">
+        <div class="drawer-content drawer-content-scrollable" role="document">
+            <div class="drawer-header bg-dark text-white">
+                <h4 class="drawer-title mx-auto" id="drawer-demo-title">
+                    <i class="fas fa-user-circle"></i>
+                    Welcome, Guest
+                </h4>
+            </div>
+            <div class="drawer-body">
+                <a href="/" class="btn btn-warning my-2  btn-sm">Home</a>
+                <hr/>
+                <h6 class="text-muted text-uppercase">OPHID : Gadget Monitoring</h6>
+                <a href="/addLocationPage" class="btn btn-outline-success my-2 btn-sm">Add Location</a>
+                <a href="/addGadgetPage" class="btn btn-outline-success my-2 btn-sm">Add Gadget</a>
+                <a href="/addEmployeePage" class="btn btn-outline-success my-2 btn-sm">Add Employee</a>
+                <a href="/AddMaintancePage" class="btn btn-outline-success my-2 btn-sm">Maintantance Request</a>
+
+
+
+
+
+
+            </div>
+            <div class="drawer-footer">
+                <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="drawer" aria-label="Close">
+                    <i class="fas fa-2x fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div> <!-- Drawer Ends -->
+
+    <a class="navbar-brand pl-2" href="/">
+        <img src="/img/favicon.png" alt="Bootstrap" width="30" height="24">
+        OPHID : Gadget Monitoring
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Search Bar Starts -->
+        <form class="form-inline px-lg-5" novalidate method="get">
+
+            <div class="input-group">
+
+
+                <div class="  col-sm-12 col-md-4 input-group-prepend">
+                    <h5 style="color: white"> Show </h5>
+                    <span style="width: 20px"></span>
+                    <div class="dropdown">
+
+                        <button class="btn btn-secondary dropdown-toggle" name="btnCategory" type="button"
+                                id="btnCategoryDropdownMenu" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                            All
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnCategoryDropdownMenu">
+                            <a class="dropdown-item" href="#">ALL</a>
+                            <a class="dropdown-item" href="#">ALLOCATED GADGETS</a>
+                            <a class="dropdown-item" href="#">NON ALLOCATED GADGETS</a>
+
+                        </div>
+                    </div>
+
+                    <span style="width: 20px"></span>
+                    <h5 style="color: white"> Gadgets</h5>
+                </div>
+
+                <span style="width: 3rem"></span>
+                <div class=" col-lg-3 col-sm-12 col-md-4 input-group-prepend">
+
+                    <input type="text" class="form-control" size="50" name="query" id="query">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-warning">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form> <!-- Search Bar Ends -->
+
+    </div>
+</nav> <!-- Navbar Ends -->
+
+
+<div class="container-fluid px-0">
+
+    <!-- Image Slider Starts -->
+    <div id="ImageSlider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="#"><img src="img/slider/drone1.jpg" class="d-block w-100" height="500"
+                                 alt="slide image 01"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="img/slider/drone2.jpg" class="d-block w-100" height="500"
+                                 alt="slide image 02"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="img/slider/drone3.jpg" class="d-block w-100" height="500"
+                                 alt="slide image 03"></a>
+            </div>
+            <div class="carousel-item ">
+                <a href="#"><img src="img/slider/drone4.jpg" class="d-block w-100" height="500"
+                                 alt="slide image 04"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="img/slider/drone5.jpg" class="d-block w-100" height="500"
+                                 alt="slide image 05"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="img/slider/drone6.jpg" class="d-block w-100" height="500"
+                                 alt="slide image 06"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="img/slider/drone7.jpg" class="d-block w-100" height="500"
+                                 alt="slide image 07"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="img/slider/drone8.jpg" class="d-block w-100" height="500"
+                                 alt="slide image 08"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="img/slider/drone9.jpg" class="d-block w-100" height="500"
+                                 alt="slide image 09"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="img/slider/drone10.jpg" class="d-block w-100" height="500"
+                                 alt="slide image 10"></a>
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#ImageSlider" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#ImageSlider" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div> <!-- Image Slider Ends -->
+
+
+    <div class="container mb-5" style="margin-top: -200px;">
+
+
+        <!-- Gadgets Row Starts -->
+        <div class="row" id="allGadgets">
+
+        </div>
+        <!-- Gadgets Row Ends -->
+
+
+
+    </div>
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery.min.js"></script>
+<!--  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Drawer JS File -->
+<script src="js/bootstrap-drawer.min.js"></script>
+<!-- Custom JavaScript -->
+<script src="js/custom.js"></script>
+</body>
+
+</html>
